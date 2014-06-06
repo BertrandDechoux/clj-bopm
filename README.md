@@ -1,6 +1,6 @@
 # clj-bopm
 
-Binomial options pricing model (BOPM)[http://en.wikipedia.org/wiki/Binomial_options_pricing_model] in clojure.
+Binomial options pricing model ([BOPM](http://en.wikipedia.org/wiki/Binomial_options_pricing_model)) in clojure.
 
 ## Installation
 
@@ -8,7 +8,7 @@ Download from https://github.com/BertrandDechoux/clj-bopm
 
 ## Usage
 
-This require (leiningen)[https://github.com/technomancy/leiningen].
+This requires ([leiningen](https://github.com/technomancy/leiningen)).
 You can then either run the application directly with leiningen...
 
 ```
