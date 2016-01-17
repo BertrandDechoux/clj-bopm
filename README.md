@@ -22,6 +22,11 @@ lein ubjerjar
 java -jar target/clj-bopm-0.1.0-SNAPSHOT-standalone.jar [args]
 ```
 
+And if you only want to run the test
+```
+lein midje
+```
+
 ## Options
 
 ```
