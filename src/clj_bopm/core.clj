@@ -61,9 +61,6 @@
 
 ;; ## The algorithm
 
-;; `TODO` fix support of MathJax within marginalia?
-;; equations would be useful at this point... 
-
 (defn burn-bopm
   "The core of the algorithm is simply a nested loop.
   It uses a local mutable primitive array for performance reason."
@@ -93,6 +90,9 @@
        step (fn [cd cu j i] (tmp-val ($= dpu * cu + dpd * cd) (diffks i j)))]
        (burn-bopm n init-step step)))
 
+;; $$up = e^{\sigma \sqrt{T \over n}}$$
+;; $$p = {up.e^{(r - q) T \over n} - 1 \over{up^2 - 1}}$$
+;; $$decay = e^{-r . T \over n}$$
 (defn start-bopm
   [T S K r sigma q n style option]
   {:pre  [(every? pos? [T S K r sigma q n])
@@ -101,6 +101,6 @@
         up ($= (exp sigma * (sqrt deltaT)))
         rqdiff (- r q)
         p (/ ($= up * (exp rqdiff * deltaT) - 1) ($= up * up - 1)) 
-	decay ($= (exp (- r) * deltaT))]
+        decay ($= (exp (- r) * deltaT))]
         (run-bopm S K p decay up n style option)))
 
