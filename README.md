@@ -2,6 +2,8 @@
 
 Binomial options pricing model ([BOPM](http://en.wikipedia.org/wiki/Binomial_options_pricing_model)) in clojure.
 
+[![Build Status](https://travis-ci.org/BertrandDechoux/clj-bopm.svg?branch=master)](https://travis-ci.org/BertrandDechoux/clj-bopm)
+
 ## Installation
 
 Download from https://github.com/BertrandDechoux/clj-bopm
@@ -22,10 +24,19 @@ lein ubjerjar
 java -jar target/clj-bopm-0.1.0-SNAPSHOT-standalone.jar [args]
 ```
 
-And if you only want to run the test
+## Dev usage
+
+If you want to run the test
 ```
 lein midje
 ```
+
+And if you want to generate the documentation
+```
+lein marg
+```
+
+Note : marginalia is currently [not compatible with clojure 1.7](https://github.com/gdeer81/marginalia/issues/153).
 
 ## Options
 
