@@ -36,8 +36,6 @@ And if you want to generate the documentation
 lein marg
 ```
 
-Note : marginalia is currently [not compatible with clojure 1.7](https://github.com/gdeer81/marginalia/issues/153).
-
 ## Options
 
 ```
